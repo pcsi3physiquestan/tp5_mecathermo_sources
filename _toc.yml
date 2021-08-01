@@ -21,5 +21,5 @@
   - file: notebook/calorimetrie_tp
 - part: Changements d'état
   chapters:
-  - file: notebook/chgtetat_preliminaire
-  - file: notebook/chgtetat_tp
+  - file: notebook/chgetat_preliminaire
+  - file: notebook/chgetat_tp

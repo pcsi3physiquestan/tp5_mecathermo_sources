@@ -75,7 +75,7 @@ Etalonnage
 1. Lancer le démarrage de l'acquisition grâce au bouton vert (5).
 2. Pour chaque image, cliquer sur la position de la bille. Le passage à l'image suivante est alors automatique.
 ---
-```{figure} ./images/Mecanique_Cineris_Lancement
+```{figure} ./images/Mecanique_Cineris_Lancement.jpg
 :name: cineris_l
 :align: center
 Lancement
