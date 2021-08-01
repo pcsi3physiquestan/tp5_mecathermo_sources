@@ -1,25 +1,29 @@
-# In _toc.yml
-- file: tp5_mecathermo.md
+format: jb-book
+root: tp5_mecathermo.md
+parts:
+- caption: Pendule pesant
   numbered: true
-
-- part: Pendule pesant
   chapters:
   - file: notebook/pendule_preliminaire
   - file: notebook/pendule_tp
-- part: Oscillations forcées
+- caption: "Oscillations forcées"
+  numbered: true
   chapters:
   - file: notebook/oscillations_preliminaire
   - file: notebook/oscillations_tp
-- part: Chute libre
+- caption: Chute libre
+  numbered: true
   chapters:
   - file: notebook/chute_preliminaire
   - file: notebook/chute_tp
   - file: notebook/ann_cineris
-- part: Calorimétrie
+- caption: "Calorimétrie"
+  numbered: true
   chapters:
   - file: notebook/calorimetrie_preliminaire
   - file: notebook/calorimetrie_tp
-- part: Changements d'état
+- caption: "Changements d'état"
+  numbered: true
   chapters:
   - file: notebook/chgetat_preliminaire
   - file: notebook/chgetat_tp
