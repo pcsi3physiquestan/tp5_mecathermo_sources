@@ -18,7 +18,7 @@ kernelspec:
 # Préliminaires
 
 ```{attention}
-Au cours de cette séance de 4h, vous effectuerez deux TP différents de 1h30: 2 binômes travailleront sur la chute d'une bille dans un fluide et 2 binômes sur les oscillations mécaniques forcées (\cref{cha_oscillations_forc_es}).
+Au cours de cette séance de 4h, vous effectuerez deux TP différents de 1h30: 2 binômes travailleront sur la chute d'une bille dans un fluide et 2 binômes sur les oscillations mécaniques forcées.
 
 Vous devez échanger de postes au bout de 1h30. La dernière heure permettra de mettre en commun et exploiter les résultats. L'organisation du TP doit être prévue à l'avance. Chaque binôme étudiera la chute de 3 billes (sur 5) dans le même tube. Il faut que les deux binômes travaillant le même poste se répartissent les billes de manière à avoir des résultats pour toutes les billes.
 

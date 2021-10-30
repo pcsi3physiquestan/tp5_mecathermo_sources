@@ -23,4 +23,3 @@ Pour le SF6, les deux binômes se répartissent les températures: le premier bi
 
 La première partie du TP durera 1h30 puis inversion des binômes. La seconde durera aussi 1h30. La dernière heure devra servir à la mise en commun et à l'exploitation des résultats.
 
-````
