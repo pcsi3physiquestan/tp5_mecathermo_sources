@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from serial import *
 
-"""Données pour la connexion série
+"""Données pour la connexion série avec l'ordinateur
 """
 nom_port = "/dev/ttyACM0" # A modifier suivant le branchement de l'arduino
 vitesse_baud = 115220  # Doit être le même que dans le programme Arduino

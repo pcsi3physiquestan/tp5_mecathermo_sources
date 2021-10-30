@@ -13,8 +13,10 @@ kernelspec:
   language: python
   name: python3
 ---
+_Il s'agit d'une étude semi-qualitative. Il n'est pas nécessaire de déterminer les incertitudes de mesure._
 
 # Travaux pratiques
+__Il est inutile de télécharger le notebook. Les exploitations devront être réalisées sous Excel.__
 
 ## Etude statique
 On rappelle que la loi de Hooke prévoit que l'allongement du ressort (écart à la longueur à vide du ressort) est proportionnel à la force appliquée à ses extrémités. La constante k de proportionnalité est appelée constante de raideur du ressort.

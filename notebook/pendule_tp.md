@@ -15,7 +15,9 @@ kernelspec:
 ---
 
 # Travaux pratiques
-_Note : Pour ce TP, on n'étudiera pas les incertitudes de mesure._
+_Note : Pour ce TP, on n'étudiera pas les incertitudes de mesure. Le but est d'observer les caractéristiques d'un oscillateur ainsi que les méthodes expérimentales et numériques permettant de remonter à ses caractéristiques._
+
+__Il est inutile de télécharger le notebook. Les exploitations qui ne peuvent être réalisées dans l'Atelier scientifique devront être réalisées sous Excel.__
 
 ## Étalonnage du dispositif de mesure
 
@@ -51,6 +53,9 @@ Proposer un protocole expérimental permettant de vérifier la relation entre la
 
 __La masse linéaire n'étant pas connue, il faudra réaliser une mesure préliminaire statique de $\lambda$.__
 ````
+```{margin}
+Les incertitudes n'étant pas demandée, la vérification restera sommaire. On rappelle néamoins que le seul modèle graphique qu'on peut valider à l'oeil est la droite.
+```
 
 ````{admonition} Etude de l'harmonicité du système
 :class: tip
@@ -65,6 +70,9 @@ où $T_0$ est la période isochrone.
 1. Procéder à la mesure de la période des oscillations pour des amplitudes grandissantes jusqu'à $90^{\circ}$ à moment d'inertie constant (placer le masse au milieu de la tige et vérifier qu'elle est bien fixée). Observe-t-on un isochronisme des oscillations ?
 2. Vérifier si la loi de Borda est conforme aux mesures.
 ````
+```{margin}
+Les incertitudes n'étant pas demandée, la vérification restera sommaire. On rappelle néamoins que le seul modèle graphique qu'on peut valider à l'oeil est la droite.
+```
 
 ### Cas d'un amortissement fluide
 

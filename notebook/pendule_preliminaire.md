@@ -59,9 +59,11 @@ On note M la masse à l'extrémité, m la masse de la tige, l la longueur de la 
 Côté contre poids, on note les grandeur analogues $M_1, l_1, L_1$.
 
 Le moment d'inertie du pendule par rapport à son axe de rotation (Ox) s'écrit alors:
-\[
+
+$$
   J=\frac{\lambda l^3}{3}+ML^2 + \frac{\lambda l_1^3}{3}+M_1 L_1^2
-\]
+$$
+
 où $\lambda$ est la masse linéique de la tige.
 
 Considérons les conditions initiales $\theta(0)=\theta_0$ et $\dot \theta(0)=\dot \theta_0$. En l'absence de frottements, le pendule suit l'équation suivante:
