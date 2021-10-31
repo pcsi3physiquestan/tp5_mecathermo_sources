@@ -22,13 +22,13 @@ La première partie du TP durera 1h30 puis inversion des binômes. La seconde du
 ## Description générale
 Pour l'ensemble du TP, les mesures seront effectuées au sein d'un calorimètre: dispositif permettant d'isoler thermiquement de l'extérieur ce qui est placé à l'intérieur. Il est constitué d'un vase en verre double paroi brillantée sous vide d'air, recouvert d'une enveloppe extérieure en plastique (NE PAS RETIRER L'ENVELOPPE PLASTIQUE!) et d'un couvercle de fermeture. Le couvercle dispose d'un petit trou pour pouvoir y glisser une sonde de température. L'ensemble est également muni d'un agitateur permettant d'homogénéiser les fluides introduis dans le calorimètre. Enfin, un dispositif de thermoplongeurs (résistances plongeantes ne devant fonctionner que sous l'eau) peut être installé sur le couvercle.
 
-Dans tout le TP, par calorimètre, on considérera l'enceinte fermée et calorifugée constituée du vase intérieur, des protections plastiques et des accessoires nécessaires aux mesures et à cette expérience (thermomètre, agitateur, thermoplongeur). Le thermomètre utilisé sera une sonde thermocouple.
+Dans tout le TP, par calorimètre, on considérera l'enceinte fermée et calorifugée constituée du vase intérieur, des protections plastiques et des accessoires nécessaires aux mesures et à cette expérience (thermomètre, agitateur, thermoplongeur). Le thermomètre utilisé sera une résistance électrique.
 
 ## Méthode électrique
 
 Le calorimètre possède une capacité thermique $C_{cal}$, éventuellement non négligeable devant celle du système placé à l'intérieur. Il est donc nécessaire de la mesurer avant toute autre chose. On propose l'utilisation de la méthode électrique. On notera $c_{eau}$ la capacité thermique massique de l'eau liquide.
 
-On place dans le calorimètre une masse meau connu d'eau et on laisse l'ensemble {calorimètre+eau} établir un équilibre thermique à la température $T_i$. On place alors une résistance R au sein du liquide et on l'alimente pendant un temps $\Delta t$ par une tension U constante. On mesure alors la température finale $T_f$ lorsque celle-ci s'est stabilisée.
+On place dans le calorimètre une masse $m_{eau}$ connu d'eau et on laisse l'ensemble {calorimètre+eau} établir un équilibre thermique à la température $T_i$. On place alors une résistance R au sein du liquide et on l'alimente pendant un temps $\Delta t$ par une tension U constante. On mesure alors la température finale $T_f$ lorsque celle-ci s'est stabilisée.
 
 Un bilan enthalpique (la transformation est monobare entre deux états d'équilibre) entre l'instant initial $t_i$ et l'instant final $t_f$ permet d'écrire:
 
@@ -43,7 +43,7 @@ Si le chauffage est suffisamment lent, on peut alors supposer la transformation 
 \end{equation}
 
 ## Méthode des mélanges
-Pour mesurer la chaleur latente de fusion de la glace, on va mélanger un système \{masse meau d'eau + calorimètre\} à la température $T_1$ avec une masse $m_{glace}$ de glace à la température de fusion $T_{fus}(Patm)=0^{\circ}\rm{C}$.
+Pour mesurer la chaleur latente de fusion de la glace, on va mélanger un système \{eau + calorimètre\} à la température $T_1$ avec une masse $m_{glace}$ de glace à la température de fusion $T_{fus}(Patm)=0^{\circ}\rm{C}$.
 
 En travaillant sur une transformation fictive (fonte isotherme totale des glaçons puis mise à l'équilibre thermique des deux systèmes), le bilan enthalpique s'écrit:
 
@@ -70,14 +70,14 @@ R(T) &= R_1 \left(\frac{E}{u_{R_1}} - 1\right)
 La température (__en K__)se déduit alors :
 
 $$
-T = {\left(\frac{1}{T_0} + \frac{1}{\beta} \ln \frac{R}{R_0}\right)}
+T = {\left(\frac{1}{T_0} + \frac{1}{\beta} \ln \frac{R}{R_0}\right)}^{-1}
 $$
 
 ## Système d'acquisition
 Des systèmes d'acquisition complets existent mais nous allons utiliser ici un système "fait maison" pour comprendre les différents éléments d'un système d'acquisition. C'est aussi l'occasion de manipuler un microcontrolleur.
 
 Le système d'acquisition sera séparé en deux parties :
-* un (microcontrolleur Arduino)[arduino_carte] muni d'un (shield Grove)[arduino_grove] pour faciliter le branchement de la sonde. Une fois programmé, le microcontrolleur aura pour rôle :
+* un [microcontrolleur Arduino](arduino_carte) muni d'un [shield Grove](arduino_grove) pour faciliter le branchement de la sonde. Une fois programmé, le microcontrolleur aura pour rôle :
     * d'alimenter le pont diviseur avec une tension $E_0 = 5V$
     * de mesurer la tension (grandeur analogique) aux bornes de $R_1$ puis la convertir en un nombre (représentation binaire de la tension, c'est une conversion analogique numérique) entre 0 (correspondant à 0V) et 1023 (correspondant à 5V).
     * d'envoyer ce nombre à l'ordinateur (sous forme de chaine de caractère)
@@ -115,14 +115,14 @@ Pour l'instant, le microcontrolleur est alimenté mais il ne remplit pas son rô
 La syntaxe utilisée par les microcontrolleurs Arduino est un dérivé du C++ et il n'est pas nécessaire de comprendre ce langage pour le TP. Vous devez par contre téléverser le programme dans Arduino.
 
 ````{note}
-Le logiciel Arduino sera disponible sur les ordinateurs de la salle de TP. Sachez néanmoins qu'il est libre et peut-être (télécharger)[https://www.arduino.cc/en/software] sur le site officiel et installé sur votre propre ordinateur.
+Le logiciel Arduino sera disponible sur les ordinateurs de la salle de TP. Sachez néanmoins qu'il est libre et peut-être [télécharger](https://www.arduino.cc/en/software) sur le site officiel et installé sur votre propre ordinateur.
 
-_Attention par contre si vous désirez utiliser votre propre ordinateur pour brancher la carte Arduino en TP. Il faudra installer la bibliothèque `pyserial` qui n'est pas installée par défaut par Anaconda._ La procédure d'installation n'est pas donnée ici.
+_Attention, si vous désirez utiliser votre propre ordinateur pour brancher la carte Arduino en TP. Il faudra installer la bibliothèque `pyserial` qui n'est pas installée par défaut par Anaconda._ La procédure d'installation n'est pas donnée ici.
 ````
 
 1. Sur le [site](https://stanislas.edunao.com/mod/folder/view.php?id=13511&forceview=1), télécharger le dossier complet. Vous y trouvez deux programmes Python sur lesquels nous reviendrons par la suite et un dossier `sonde_ctn` contenant un fichier `.ino` : c'est le programme que vous allez téléverser dans la carte.
 2. Ouvrir le logiciel Arduino puis ouvrir le fichier `sonde_ctn.ino` que vous venez de télécharger.
-3. Il n'est pas nécessaire de comprendre ce programme, vous devez juste repérer la ligne à est définie le PIN de de branchement de la sonde (A0, A1...). Remplacer le par celui où vous avez branché la sonde.
+3. Il n'est pas nécessaire de comprendre ce programme, vous devez juste repérer la ligne où est définie le PIN de de branchement de la sonde (A0, A1...). Remplacer le par celui où vous avez branché la sonde.
 4. `Vérifier` que le programme est correct (premier bouton de la barre d'outil). S'il n'y a pas de message d'erreur, passez à l'étape suivante, sinon appeler l'enseignant.
 5. Dans `Outils > Port`, choisir celui proposé correspondant à la carte Arduino. Notez au passage son nom car vous pourriez en avoir besoin pour la partie Python.
 6. `Téléverser` ensuite votre programme dans la carte (deuxième bouton de la barre d'outil). 
@@ -142,7 +142,7 @@ On pourrait se limiter au moniteur série pour recueillir la température initia
 La bibliothèques `pyserial` permet à un script Python de se connecter à un port série (entrée de l'ordinateur pemettant la communication avec un appareil, ici Arduino) pour les données envoyées par le microcontrolleur. On ne présente pas ici le fonctionnement de cette bibliothèque.
 
 Dans le dossier que vous avez téléchargé, vous trouverez deux fichiers Python :
-* `scope.py` contient la fonction qui utilise la bibliothèques `pyserial` pour lire les données et un objet Scope qui va gérer l'affichage en temps réel des mesures sur un graphique. Ce fichier __n'est à modifier sous aucun pretexte.__
+* `scope.py` contient la fonction qui utilise la bibliothèque `pyserial` pour lire les données et un objet Scope qui va gérer l'affichage en temps réel des mesures sur un graphique. Ce fichier __n'est à modifier sous aucun pretexte.__
 * `acquisition_duino.py` contient les fonctions permettant d'obtenir la température à partir des données renvoyées puis d'afficher $T(t)$. C'est __ce fichier que vous allez devoir modifier en partie puis exécuter.__
 
 ````{attention}
@@ -155,7 +155,7 @@ La majeure partie du programme est déjà écrite. Elle est divisée en trois pa
     * Modifier les valeurs numériques des différentes grandeurs en fonction des données précédentes.
     * Modifir la durée d'observation `t_obs` et le nom du fichier `nom_fichier` dans lequel les données seront enregistrées (pensez à modifier ces deux grandeurs pour chaque acquisition pour éviter d'écraser un précédent fichier).
     * Modifier les trois fonctions pour qu'elles renvoient bien ce qu'on attend.
-2. Une fonction `read_data`qui va gérer la lecture du port série et le calcul de la température grâce aux fonctions précédentes. Cette partie n'est pas à modifier.
+2. Une fonction `read_data` qui va gérer la lecture du port série et le calcul de la température grâce aux fonctions précédentes. Cette partie n'est pas à modifier.
 3. Un tracé en temps réel. Cette partie n'est pas non plus à modifier.
 
 ````{important}

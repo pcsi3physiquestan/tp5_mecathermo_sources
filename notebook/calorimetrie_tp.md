@@ -48,29 +48,29 @@ On sera très prudent lors de la manipulation du circuit car les courants qui ci
 L'acquisition va se faire en 3 étapes :
 1. Mesure de la température de l'eau pendant 2 minutes sans allumer l'alimentation.
 2. Allumage de l'alimentation pour délivrer une tension de 10V environ (utiliser la molette de réglage de tension). __Ne pas dépasser 12V.__ Noter alors les valeurs de tension et d'intensité pour le calcul de puissance.  _Noter précisément le temps d'allumage (qui s'affiche dans la console Python)_
-3. Au bout de 10 minutes, extinction de l'alimentation. On laisse encore l'acquisition touerner jusqu'à un total de 15 minutes pour être sûr que l'équilibre thermique est réalisé. _Noter précisément le temps d'extinction (qui s'affiche dans la console Python)_
+3. Au bout de 10 minutes, extinction de l'alimentation. On laisse encore l'acquisition tourner jusqu'à un total de 15 minutes pour être sûr que l'équilibre thermique est réalisé. _Noter précisément le temps d'extinction (qui s'affiche dans la console Python)_
 
 > Acquisition :
 > 1. Modifier la durée d'observation `t_obs` (15 minutes, attention, la durée est en millisecondes) et le nom du fichier d'enregistrement dans le programme Python.
-> 2. Lancer le programme Python pour lancer l'acquisition.
-> 3. Au bout de 2 minutes, allumer l'alimentation
+> 2. Lancer le programme Python pour lancer l'acquisition. _Si on vous demande dans la console le port correspondant à Arduino, chosir le numéro correspondant au nom du port que vous avez noté en programmant la carte._
+> 3. Au bout de 2 minutes, allumer l'alimentation. Vous pouvez agiter doucement de temps en temps.
 > 4. Au bout de 10 minute, éteindre l'alimentation puis laisser l'acquisition aller à son terme.
 
 ````{admonition} Exploitation des résultats
 :class: tip
 1. Observation l'allure de $T(t)$. Peut-on supposer que la transformation a été quasi-statique?
-2. Déterminer à partir du fichier de données la capacités thermiques du calorimètre. On estimera les sources d'incertitudes ainsi que leur expressions puis on calculera l'incertitude sur $C_{cal}$ par __propagation des variances__.
+2. Déterminer à partir du fichier de données la capacités thermique du calorimètre. On estimera les sources d'incertitudes ainsi que leur expressions puis on calculera l'incertitude sur $C_{cal}$ par __propagation des variances__.
 ````
 
 ## Mesure de la chaleur latente de fusion de la glace
 
-On désire mesure la chaleur latente massique de fusion de la glace à pression atmosphérique $l_{f, glace}$. On rappelle que cette grandeur correspond à l'enthalpie libérée par le système lors d'un changement d'état isobare (et donc isotherme). On utilise la méthode des mélanges.
+On désire mesurer la chaleur latente massique de fusion de la glace à pression atmosphérique $l_{f, glace}$. On rappelle que cette grandeur correspond à l'enthalpie libérée par le système lors d'un changement d'état isobare (et donc isotherme). On utilise la méthode des mélanges.
 
 __L'introduction de la glace devra être rapide. Il est donc conseillé de bien maîtriser la procédure avant de la réaliser. Tout élève pris entrain de s'amuser avec la glace sera expulsé du TP.__
 
 > 1. On va refaire une acquisition de 15 minutes. __PENSEZ A CHANGER LE NOM DU FICHIER DANS LE SCRIPT POUR NE PAS EFFACER VOS DONNEES PRECEDENTES.__
-> 2. Garder le dispositif précédent. Lancer une acquisition de 15 minutes. Au bout de 2 minutes, poser une casserole sur une balance et la tarer. Sortir les glaçons, les piller puis les placer dans la casserole pour environ 200g (la mesure précise sera faite à la fin). Les mettre dans le calorimètre (sans que ça déborde) __Cette manipulation doit être rapide.__
-> 3. Mélanger de temps en temps pour accélérer la mise à l'équilibre. Lorsque l'acquisition est terminée, vérifier que l'équilibre thermique a été atteint.
+> 2. Garder le dispositif précédent. Lancer une acquisition de 15 minutes. Au bout de 2 minutes, poser une casserole sur une balance et la tarer. Sortir les glaçons, les piler puis les placer dans la casserole pour environ 200g (la mesure précise sera faite à la fin). Les mettre dans le calorimètre (sans que ça déborde) __Cette manipulation doit être rapide.__
+> 3. Mélanger doucement de temps en temps pour accélérer la mise à l'équilibre. Lorsque l'acquisition est terminée, vérifier que l'équilibre thermique a été atteint.
 > 4. __NE PAS JETER l'eau.__ Peser le contenu du calorimètre. En retranchant la quantité d'eau initialement dans le calorimètre, vous aurez une pesez précise des glaçons.
 
 ````{admonition} Exploitation des résultats
