@@ -123,10 +123,11 @@ _Attention, si vous désirez utiliser votre propre ordinateur pour brancher la c
 1. Sur le [site](https://stanislas.edunao.com/mod/folder/view.php?id=13511&forceview=1), télécharger le dossier complet (il sera sous forme d'archive qu'il faudra décompresser). Vous y trouvez deux programmes Python sur lesquels nous reviendrons par la suite et un dossier `sonde_ctn` contenant un fichier `.ino` : c'est le programme que vous allez téléverser dans la carte.
 2. Ouvrir le logiciel Arduino puis ouvrir le fichier `sonde_ctn.ino` que vous venez de télécharger.
 3. Il n'est pas nécessaire de comprendre ce programme, vous devez juste repérer la ligne où est définie le PIN de branchement de la sonde (A0, A1...) grâce aux commentaires. Remplacer le par celui où vous avez branché la sonde.
-4. `Vérifier` que le programme est correct (premier bouton de la barre d'outil). S'il n'y a pas de message d'erreur, passez à l'étape suivante, sinon appeler l'enseignant.
-5. Dans `Outils > Port`, choisir celui proposé correspondant à la carte Arduino. Notez au passage son nom car vous pourriez en avoir besoin pour la partie Python.
+4. `Vérifier` (ou plutôt demander au logiciel de vérifier) que le programme est correct (premier bouton de la barre d'outil). S'il n'y a pas de message d'erreur, passez à l'étape suivante, sinon appeler l'enseignant.
+5. Dans `Outils > Port`, choisir celui proposé correspondant à la carte Arduino. Notez au passage son nom car vous en aurez besoin pour la partie Python.
 6. `Téléverser` ensuite votre programme dans la carte (deuxième bouton de la barre d'outil). 
-7. S'il n'y a pas d'erreur, votre carte a commencé à envoyer les mesures de température ainsi que l'intervalle de temps entre deux mesures. Vous pouvez le vérifier en ouvrant le moniteur série (bouton tout à gauche de la barre d'outil) puis choisir 115200 baud dans le menu en bas à droite. Vous devriez voir s'afficher les mesures de temps et de température.
+7. S'il n'y a pas d'erreur, votre carte a commencé à envoyer les mesures de température ainsi que l'intervalle de temps entre deux mesures.
+8. Vérifier son bon fonctionnement en ouvrant le moniteur série (bouton tout à gauche de la barre d'outil) puis choisir 115200 baud dans le menu en bas à droite de la nouvelle fenêtre. Vous devriez voir s'afficher les mesures de temps (d'intervalle de temps) et de température.
 
 ````{note}
 L'acquisition par un microcontrolleur se fait toujours de la même manière :
