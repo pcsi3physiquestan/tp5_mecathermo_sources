@@ -70,7 +70,7 @@ R(T) &= R_1 \left(\frac{E}{u_{R_1}} - 1\right)
 La température (__en K__)se déduit alors :
 
 $$
-T = {\left(\frac{1}{T_0} + \frac{1}{\beta} \ln \frac{R}{R_0}\right)}^{-1}
+T = {\left(\frac{1}{T_0} + \frac{1}{\beta} \ln \frac{R(T)}{R_0}\right)}^{-1}
 $$
 
 ## Système d'acquisition
