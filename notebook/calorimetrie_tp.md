@@ -50,7 +50,7 @@ L'acquisition va se faire en 3 étapes :
 2. Allumage de l'alimentation pour délivrer une tension de 10V environ (utiliser la molette de réglage de tension). __Ne pas dépasser 12V.__ Noter alors les valeurs de tension et d'intensité pour le calcul de puissance.  _Noter précisément le temps d'allumage (qui s'affiche dans la console Python)_
 3. Au bout de 10 minutes, extinction de l'alimentation. On laisse encore l'acquisition tourner jusqu'à un total de 15 minutes pour être sûr que l'équilibre thermique est réalisé. _Noter précisément le temps d'extinction (qui s'affiche dans la console Python)_
 
-> Acquisition :
+> Acquisition (__bien suivre les réglages de l'étude préliminaire__):
 > 1. Modifier la durée d'observation `t_obs` (15 minutes, attention, la durée est en millisecondes) et le nom du fichier d'enregistrement dans le programme Python.
 > 2. Lancer le programme Python pour lancer l'acquisition. _Si on vous demande dans la console le port correspondant à Arduino, chosir le numéro correspondant au nom du port que vous avez noté en programmant la carte._
 > 3. Au bout de 2 minutes, allumer l'alimentation. Vous pouvez agiter doucement de temps en temps.

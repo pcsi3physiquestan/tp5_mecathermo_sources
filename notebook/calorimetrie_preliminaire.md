@@ -48,7 +48,7 @@ Pour mesurer la chaleur latente de fusion de la glace, on va mélanger un systè
 En travaillant sur une transformation fictive (fonte isotherme totale des glaçons puis mise à l'équilibre thermique des deux systèmes), le bilan enthalpique s'écrit:
 
 \begin{equation}
-  m_{glace} l_{f,glace} + m_{glace} (T_f -T_{fus})+(C_{cal}+c_{eau} m_{eau}) (T_f -T_1)=0
+  m_{glace} l_{f,glace} + m_{glace} c_{eau} (T_f -T_{fus})+(C_{cal}+c_{eau} m_{eau}) (T_f -T_1)=0
 \end{equation}
 
 ## Sonde de température
@@ -81,7 +81,7 @@ Le système d'acquisition sera séparé en deux parties :
     * d'alimenter le pont diviseur avec une tension $E_0 = 5V$
     * de mesurer la tension (grandeur analogique) aux bornes de $R_1$ puis la convertir en un nombre (représentation binaire de la tension, c'est une conversion analogique numérique) entre 0 (correspondant à 0V) et 1023 (correspondant à 5V).
     * d'envoyer ce nombre à l'ordinateur (sous forme de chaine de caractère)
-* un ordinateur et plus précisément un script Python (à ouvrir avec Pyzo ou Spyder) qui a pour rôle :
+* un ordinateur et plus précisément un script Python (à ouvrir avec Pyzo) qui a pour rôle :
     * de récupérer les mesures envoyées par Arduino
     * de calculer la température correspondant à la tension mesurée
     * d'afficher sur un graphique en temps réel l'évolution de T.
@@ -150,6 +150,10 @@ Le fichier que vous exécuterez fait appel au premier. Il __faut donc que les de
 ````
 
 #### Modification du programme Python
+````{important} Environnement python
+__Lorsque vous lancez pyzo, allez dans `Shell` puis `Configuration des shells` et dans le menu déroulant `exe`, choisir le chemin vers l'executable python contenant `envprepa`.__ Sans quoi, vous n'aurez pas accès à la bibliothèques `pyserial`.
+````
+
 La majeure partie du programme est déjà écrite. Elle est divisée en trois parties :
 1. Les fonctions permettant de passer de la représentation binaire à la tension en volt (`CNA`), de la tension $u$ à la résistance $R(T)$ (`Rdiv`) puis de la valeur de la résistance à la température $T$ (`Tth`).
     * Modifier les valeurs numériques des différentes grandeurs en fonction des données précédentes.
@@ -160,4 +164,11 @@ La majeure partie du programme est déjà écrite. Elle est divisée en trois pa
 
 ````{important}
 Une fois l'exécution du script lancé, vous ne pourrez plus modifié les paramètres et l'acquisition est longue donc vérifiez que tout est bon avant de lancer le programme.
+````
+
+#### Test
+
+````{important} Test du programme
+Avant de réaliser l'acquisition de 15 minutes comme demandé dans le TP, lancer une acquisition de quelques secondes une fois le montage réalisé pour vérifier que le programme fonctionne correctement.
+
 ````
