@@ -138,9 +138,9 @@ L'acquisition par un microcontrolleur se fait toujours de la même manière :
 ````
 
 ### Acquisition grâce à Python
-On pourrait se limiter au moniteur série pour recueillir la température initiale et finale mais on va faire mieux au moyen de Python : on va afficher en temps réel 
+On pourrait se limiter au moniteur série pour recueillir la température initiale et finale mais on va faire mieux au moyen de Python : on va afficher en temps réel $T(t)$.
 
-La bibliothèques `pyserial` permet à un script Python de se connecter à un port série (entrée de l'ordinateur pemettant la communication avec un appareil, ici Arduino) pour les données envoyées par le microcontrolleur. On ne présente pas ici le fonctionnement de cette bibliothèque.
+La bibliothèques `pyserial` permet à un script Python de se connecter à un port série (entrée de l'ordinateur pemettant la communication avec un appareil, ici Arduino) pour recevoir les données envoyées par le microcontrolleur. On ne présente pas ici le fonctionnement de cette bibliothèque.
 
 Dans le dossier que vous avez téléchargé, vous trouverez deux fichiers Python :
 * `scope.py` contient la fonction qui utilise la bibliothèque `pyserial` pour lire les données et un objet Scope qui va gérer l'affichage en temps réel des mesures sur un graphique. Ce fichier __n'est à modifier sous aucun pretexte.__
