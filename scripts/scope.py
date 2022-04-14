@@ -14,8 +14,8 @@ class Scope:
     def __init__(self, ax, ylim=[0, 30],  maxt=10000):
         self.ax = ax
         self.maxt = maxt
-        self.ax.set_xlabel(labels[0])
-        self.ax.set_xlabel(labels[1])
+        #self.ax.set_xlabel("t")
+        #self.ax.set_ylabel("T")
         self.tdata = [0]
         self.ydata = [0]
         self.line = Line2D(self.tdata, self.ydata, marker='+', linestyle='', label='Température')
@@ -42,6 +42,7 @@ class Communication:
         self.f_traitement = f_traitement  # Fonction pour obtenir les grandeurs voulues
         self.t_obs = tobs  # Durée d'observation
         self.titre = titre # En-tête pour le fichier de données
+        self.port_serie = self.get_port()  # Création de la liaison avec Arduino
 
     def get_port(self):
         """Détection et choix du port série
@@ -77,13 +78,12 @@ class Communication:
     def read_data(self):
         """Fonction qui acquiert les données depuis Arduino et
         les traite. Sa compréhension n'est pas nécessaire."""
-        port_serie = self.get_port()  # Création de la liaison avec Arduino
         with open(self.nom_fichier, 'w') as f_data: # Ouverture du fichier pour enregistrement.
             f_data.write("t(ms)," + self.titre)
             t_in = 0
             while t_in <= self.t_obs:
-                if port_serie.isOpen():  # Vérification de la connection
-                    toread = port_serie.readline()  # Lecture d'une ligne de mesure
+                if self.port_serie.isOpen():  # Vérification de la connection
+                    toread = self.port_serie.readline()  # Lecture d'une ligne de mesure
                     toread = toread.decode("utf-8").split(",")  # Séparation Delta t et Tension
                     if len(toread) == 2:
                         t_in = t_in + int(toread[0])  # Nouveau temps
@@ -98,7 +98,7 @@ class Communication:
                     print("Port serie ferme. Acquisition impossible.")
                     yield []
             print("Fin")
-            port_serie.close()
+            self.port_serie.close()
 
 
 # def CNA(Ubinaire):

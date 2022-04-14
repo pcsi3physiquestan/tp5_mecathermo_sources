@@ -80,7 +80,7 @@ soit:
 avec  
 
 $$
-\omega_0 = \sqrt{\frac{\lambda l^2/2+ML - \lambda l_1^2/2+M_1 L_1}{\lambda l^3/3 + ML^2 + \lambda l_1^3/3 + M_1 L_1^2}}
+\omega_0 = \sqrt{g\frac{\lambda l^2/2+ML - \lambda l_1^2/2+M_1 L_1}{\lambda l^3/3 + ML^2 + \lambda l_1^3/3 + M_1 L_1^2}}
 $$
 
 Au petites oscillations, le système se comporte comme un oscillateur harmonique et est isochrone. Ce n'est plus le cas aux fortes oscillations.
