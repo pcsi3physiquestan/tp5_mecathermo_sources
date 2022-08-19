@@ -1,6 +1,6 @@
 // Mesure de la tension aux bornes d'une résistance CTN
 const int sonde=A0;  // PIN de branchement de la sonde
-unsigned long deltat = 1000;            // Intervalle de temps entre deux mesures en ms
+unsigned long deltat = 10;            // Intervalle de temps entre deux mesures en ms
 unsigned long myTime; // Temps de la dernière mesure
 
 int U;            // Tension CTN (R1 plus précisément)
