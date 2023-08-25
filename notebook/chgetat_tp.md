@@ -61,7 +61,7 @@ Pour éviter tout risque d'explosion: NE JAMAIS DéPASSER LA PRESSION MAXIMALE D
 Lorsque le gaz est en équilibre avec le liquide, on dit que le gaz (ou vapeur) est une vapeur saturante. Sa pression est appelée pression de vapeur saturante, notée $p_{sat} (T)$, pression maximale que peut atteindre une vapeur et qui correspond également à la pression à laquelle s'effectue le changement d'état. La pression de vapeur saturante dépend de la température et suit la loi de RANKINE, où T désigne la température absolue, en kelvins:
 
 $$
-p_{sat}=a e^{-bT}
+p_{sat}=a e^{-b/T}
 $$
 
 
