@@ -120,7 +120,7 @@ Le logiciel Arduino sera disponible sur les ordinateurs de la salle de TP. Sache
 _Attention, si vous désirez utiliser votre propre ordinateur pour brancher la carte Arduino en TP. Il faudra installer la bibliothèque `pyserial` qui n'est pas installée par défaut par Anaconda._ La procédure d'installation n'est pas donnée ici.
 ````
 
-1. Sur le [site](https://stanislas.edunao.com/mod/folder/view.php?id=13511&forceview=1), télécharger le dossier complet (il sera sous forme d'archive qu'il faudra décompresser). Vous y trouvez deux programmes Python sur lesquels nous reviendrons par la suite et un dossier `sonde_ctn` contenant un fichier `.ino` : c'est le programme que vous allez téléverser dans la carte.
+1. Sur le [site](https://moodlecpge.stanislas.fr/mod/folder/view.php?id=96), télécharger le dossier complet (il sera sous forme d'archive qu'il faudra décompresser). Vous y trouvez deux programmes Python sur lesquels nous reviendrons par la suite et un dossier `sonde_ctn` contenant un fichier `.ino` : c'est le programme que vous allez téléverser dans la carte.
 2. Ouvrir le logiciel Arduino puis ouvrir le fichier `sonde_ctn.ino` que vous venez de télécharger.
 3. Il n'est pas nécessaire de comprendre ce programme, vous devez juste repérer la ligne où est définie le PIN de branchement de la sonde (A0, A1...) grâce aux commentaires. Remplacer le par celui où vous avez branché la sonde.
 4. `Vérifier` (ou plutôt demander au logiciel de vérifier) que le programme est correct (premier bouton de la barre d'outil). S'il n'y a pas de message d'erreur, passez à l'étape suivante, sinon appeler l'enseignant.
